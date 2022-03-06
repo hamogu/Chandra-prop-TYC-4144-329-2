@@ -1,0 +1,161 @@
+%% LaTeX template for the science justification & technical
+%% feasibility to be submitted as part of a Chandra X-ray Observatory
+%% proposal.
+%%
+%% Chandra Cycle 24
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% DOCUMENT FORMAT %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The default font was chosen to be easily readable while allowing
+%% sufficient material to be included.
+
+%% The two-column, 11pt format fits the largest number of characters
+%% per page while still being easily read.
+
+%% There are three documentclass commands provided below. Please
+%% uncomment the version you would like to use and comment out the
+%% others.
+
+%% Please note that the proposal requires US Letter size pages,
+%% 8.5 in x 11 in. PLEASE DO NOT CHANGE THE 'LETTERPAPER' OPTION
+%% IN THE DOCUMENTCLASS COMMAND.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Converting this document to PDF %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% See  https://cxc.harvard.edu/proposer/generatePDF.html
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Displaying DS9 figures %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% See  https://cxc.harvard.edu/proposer/generatePDF.html
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Default format: 11pt single column %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Default font, two-column %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[letterpaper,11pt,twocolumn]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Maximum Recommended format %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[letterpaper,11pt,twocolumn]{article}
+
+
+\usepackage{graphics,graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Page dimensions %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\textwidth}{6.5in} 
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-0.0625in} 
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in} 
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in} 
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Section heading format %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand{\section}{\@startsection%
+{section}{1}{0mm}{-\baselineskip}%
+{0.5\baselineskip}{\normalfont\Large\bfseries}}%
+\makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Start of document %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title of proposal %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} 
+\bfseries\uppercase{%
+%%
+%% ENTER TITLE OF PROPOSAL BELOW THIS LINE
+Do stellar mergers always create convective zones in the remnant?
+%%
+%%
+}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Body of science justification %%%%%
+%%%%% and technical feasibility     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% ENTER TEXT AND FIGURES BELOW
+%%
+
+A large fraction of all stars in the universe are formed in binary or multiple systems \cite{}. If the components of a binary or multiple systems are close enough to interact in some way, they can go through very different evolutionary pathways then single stars do. Many of aspects of interacting binaries in some evolutionary phase are subject to intense study, such LIGO detections of the merger of neutron stars or black holes. However, stellar mergers can also happen in non-degenerate stars and this proposal requests observations to study one object that is strongly suspected to have undergone a recent merger: TYC-4144-329-2. 
+
+
+\textbf{The target TYC-4144-329-2}
+Today, the target is a member of a wide ($> 5$ arcsec) binary. TYC-4144-329-2 itself is a F2-type first ascent giant star in a wide orbit with the otherwise normal  TYC-4144-329-2, an G8 IV \cite{2009ApJ...696.1964M}, but this systems may have been a hirachical multiple system in the past. TYC-4144-329-2 
+
+
+\textbf{Feasibility}
+
+The measured reddening for TYC-4144-329-2, $E_{B−V} = 0.32$, corresponds to $A_V = 1$ assuming interstellar-like grains \cite{2009ApJ...696.1964M}. Existing observations are insufficient to test the dust grain properties, so we perform our feasibility analysis for interstellar grains. This translates to $N_\mathrm{H} = 1.8*10^{21}$~cm${-2}$ \cite{1995A&A...293..889P}. The bolometric luminosity of TYC-4144-329-2 is $16\;L_\odot$ and the distance 550~pc \cite{2009ApJ...696.1964M}.
+
+While no rotational period has been directly observed, we can estimate a lower bound from the mass, surface gravity, and $v\sin i$ \cite{2009ApJ...696.1964M}. This gives a rotation period around 7 days assuming that we observe the equator. Looking at Figure~\ref{fig:lxlbol}, we can thus expect a $\log(L_\mathrm{X}/L_\mathrm{bol}) > -5.0$, the value seen for BP~Psc and possibly significantly higher. However, if the target turns out to be fainter, we want to be able to set an upper limit that proves it to be significantly less X-ray active than BP~Psc and TYC~2597-735-1. Such an upper limit would rule out a shallow convective dynamo as proposed for TYC~2597-735-1. We thus design the observation to detect our target down to  $\log(L_\mathrm{X}/L_\mathrm{bol}) = -5.5$. According to WebPimms, the flux for ACIS-S is between 4 and 10 counts per 10~ks for plasma temperatures between 0.5 and 2 keV, typical for coronal plasma and consistent with the data from BP~Psc \cite{2010ApJ...719L..65K} and TYC 2597-735-1 \cite{2022arXiv220205424G}, which likely rotate slower. To safely detect the target even at this low flux, we request an exposure time of 30~ks. Given Poisson statistics, that gives us a $>99$\% chance of detecting the source with at least four photons in the 4 ct/10~ks scenario. Using the ACIS CCD energy resolution, we can apply a narrow band filter in just the 1-3~keV range, and thus background will be negligible. Only Chandra's PSF is good enough to safely distinguish TYC-4144-329-1 and TYC-4144-329-2 with a separation around 5 arcsec.
+
+
+
+
+
+%% Technical Justification for Joint Facilities section
+%% comment this section out on proposals not asking for
+%% joint time
+
+%\section{Technical Justification for Joint Facilities}
+
+
+
+%% References section
+
+\section{References}
+
+
+\bibliography{bib}{}
+\bibliographystyle{natbib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% End of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
